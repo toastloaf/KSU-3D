@@ -54,9 +54,11 @@
     }
 }
 
-#indexGIF {
+#iframeMain {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        margin-top: 4%;
+        height: 80vh;
+        width: 100%;
     }
