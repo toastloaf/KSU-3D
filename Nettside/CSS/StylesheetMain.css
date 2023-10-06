@@ -1,4 +1,4 @@
-#indexHeader {
+.header {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -8,8 +8,17 @@
         font-family: 'Open Sans', sans-serif;
         text-shadow: 2px 2px black;
         color: white;
-        position: relative;
-        padding: 0 20px; /* add this */
+        /* position: sticky; */
+        padding: 0 20px;
+        position: fixed;
+        top: 1%;
+        width: 97%;
+}
+
+.sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
 }
 
 #btn1,
