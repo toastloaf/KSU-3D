@@ -7,18 +7,17 @@
     <title>KSU-3D</title>
 </head>
 <style>
+    embed{height: 100vh;width: 100%;}
     td img{height:400px ;width:500px ;}
     td:nth-child(2){padding-left: 100px;}
 </style>
 <body>
+    <span id="gr"></span>
     <div class="header" id="indexHeader">
         <h1>KSU-3D: Fabrikator for alle</h1>
-            <button id="btn1">Side2</button>
-            <button id="btn2">Side3</button>
-    </div>
-    <div id="iframeMain">
-        <iframe src="side3Butikk.html" id="iframeMain"></iframe>
-    </div>
+            <button id="btn1" onclick="side2switch()" value="Off">Side2</button>
+            <button id="btn2" onclick="side3switch()" value="Off">Side3</button>
+        </div>
     <p style="text-align: center;">Hei, vi er en elevbedrift fra kristiansund som arbeider med 3D-printing.<br>Vi selger ferdige produkter fra butikken vår, og individe commisions.</p>
     <table align="center">
         <tr>
@@ -44,4 +43,40 @@
     </table>
 -->
 </body>
+<script>
+    function side2switch(){
+        currentvalue = document.getElementById("btn1").value;
+        if(currentvalue == "Off"){
+            document.getElementById("btn1").value="On";
+            const para = document.createElement("div");
+            para.id = "temp1";
+            para.innerHTML = '<embed src="side2Commision.html">';
+            document.getElementById("gr").appendChild(para);
+            const swap = document.getElementById("temp2");
+            swap.remove();
+            document.getElementById("btn2").value="Off";}
+        else{
+            document.getElementById("btn1").value="Off";
+            document.getElementById("temp1");
+            const clean = document.getElementById("temp1");
+            clean.remove();}}
+</script>
+<script>
+    function side3switch(){
+        currentvalue = document.getElementById("btn2").value;
+        if(currentvalue == "Off"){
+            document.getElementById("btn2").value="On";
+            const paro = document.createElement("div");
+            paro.id = "temp2";
+            paro.innerHTML = '<embed src="side3Butikk.html">';
+            document.getElementById("gr").appendChild(paro);
+            const swap = document.getElementById("temp1");
+            swap.remove();
+            document.getElementById("btn1").value="Off";}
+        else{
+            document.getElementById("btn2").value="Off";
+            document.getElementById("temp2");
+            const clean = document.getElementById("temp2");
+            clean.remove();}}
+</script>
 </html>
