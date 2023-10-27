@@ -4,15 +4,15 @@
         align-items: center;
         background-color:orange;
         outline: 2px solid blue;
-        border-radius: 10px;
         font-family: 'Open Sans', sans-serif;
         text-shadow: 2px 2px black;
         color: white;
         /* position: sticky; */
         padding: 0 20px;
         position: fixed;
-        top: 1%;
-        width: 97%;
+        top: 2px;
+        left: 2px;
+        right: 2px;
         z-index: 2;
 }
 
