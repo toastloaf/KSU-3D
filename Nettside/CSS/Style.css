@@ -9,7 +9,31 @@ header {
 }
 
 #OrderButton {
-    float: inline-end;
-    margin-right: 65%;
-    margin-top: 3%;
+    position: relative; bottom: 1.5ch;
+    margin-left: 10%;
+    display: inline-block;
+}
+
+#SupportButton {
+    position: relative; bottom: 1.5ch;
+    margin-left: 15%;
+    display: inline-block;
+}
+
+#InfoButton {
+    position: relative; bottom: 1.5ch;
+    margin-left: 15%;
+    display: inline-block;
+}
+
+.scrolling-text {
+    overflow: hidden;
+    border-bottom: 3px solid grey;
+}
+
+.scrolling-text p {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: x-large;
+    font-family: "Exo 2", sans-serif;
 }
