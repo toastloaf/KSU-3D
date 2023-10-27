@@ -1,0 +1,15 @@
+#LogoHeader {
+    width: 20%;
+    transform: translateX(7%);
+    margin-top: 1%;
+}
+
+header {
+    border-bottom: 3px solid grey;
+}
+
+#OrderButton {
+    float: inline-end;
+    margin-right: 65%;
+    margin-top: 3%;
+}
