@@ -1,6 +1,5 @@
 .header {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         background-color:orange;
         outline: 2px solid blue;
@@ -14,6 +13,7 @@
         left: 2px;
         right: 2px;
         z-index: 3;
+        border-radius: 5px 0px 0px 0px;
 }
 
 .sticky {
@@ -42,6 +42,7 @@
 
 #btn1 {
         margin-right: 10px;
+        margin-left: 1150px;
 }
 
 #btn2 {
