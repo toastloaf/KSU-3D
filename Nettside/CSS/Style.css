@@ -20,7 +20,7 @@ header {
     display: inline-block;
     font-size: 1.5rem;
     padding: 0.5rem 4rem;
-    border: none;
+    border: 3px solid #f2f2f2;
     border-radius: 5px;
     margin-left: 2rem;
     cursor: pointer;
@@ -28,8 +28,8 @@ header {
 }
 
 #OrderButton:hover, #SupportButton:hover, #InfoButton:hover {
-    background-color: #f2f2f2;
-    color: #1a1a1a;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
 }
 
 .scrolling-text {
