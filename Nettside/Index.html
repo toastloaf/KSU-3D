@@ -16,11 +16,16 @@
         <h1>KSU-3D: Fabrikator for alle</h1>
             <button id="btn1" onclick="side2switch()" value="Off">Commisions</button>
             <button id="btn2" onclick="side3switch()" value="Off">Butikk</button>
+            <button id="btn3" onclick="side4switch()" value="Off">Nyheter</button>
     </div>
     <span id="gr"></span>
     <p><br><br><br><br><br></p>
-    <h1 style="text-align: center;">Hvem er vi?</h1>
-    <img class="imgc" src="https://th.bing.com/th/id/R.80ca8638e5a16bb9b0be1304f8dd4195?rik=sDMllZ5I3hTlEg&riu=http%3a%2f%2fcanonusa.i.lithium.com%2ft5%2fimage%2fserverpage%2fimage-id%2f8218iBEAE12A7A45C909D%3fv%3d1.0&ehk=sK1fZDuTh2zf%2bZsznVOz4aY6xzgipiWV7RwSh0jmYDY%3d&risl=1&pid=ImgRaw&r=0">
+<table style="border-collapse: collapse;width:1872px;margin-left: -8px;margin-top: -3px;">
+    <tr>
+        <td style="border: 2px solid blue;width: 70%;"><img style="margin: -1px;" src="https://th.bing.com/th/id/R.80ca8638e5a16bb9b0be1304f8dd4195?rik=sDMllZ5I3hTlEg&riu=http%3a%2f%2fcanonusa.i.lithium.com%2ft5%2fimage%2fserverpage%2fimage-id%2f8218iBEAE12A7A45C909D%3fv%3d1.0&ehk=sK1fZDuTh2zf%2bZsznVOz4aY6xzgipiWV7RwSh0jmYDY%3d&risl=1&pid=ImgRaw&r=0"></td>
+        <td style="border: 2px solid blue;width: 30%;"><div style="background-color: red;margin: -1px;"> test</div></td>
+    </tr>
+</table>
     <p style="text-align: center;">Hei, vi er en elevbedrift fra kristiansund som arbeider med 3D-printing.<br>Vi selger ferdige produkter fra butikken vår, og individe commisions.</p>
     <h1 style="text-align: center;">Våre produkter</h1>
     <table align="center">
@@ -53,17 +58,13 @@
         if(currentvalue == "Off"){
             document.getElementById("btn1").value="On";
             const para = document.createElement("div");
-            para.id = "temp1";
-            para.innerHTML = '<embed src="side2Commision.html">';
+            para.innerHTML = '<embed src="side2Commision.html" id="temp1">';
             document.getElementById("gr").appendChild(para);
-            const swap = document.getElementById("temp2");
-            swap.remove();
-            document.getElementById("btn2").value="Off";}
+            document.querySelectorAll("#temp3,#temp2").forEach(e => e.remove());
+            document.querySelectorAll("#btn3,#btn2").forEach(e => e.value = "Off");}
         else{
             document.getElementById("btn1").value="Off";
-            document.getElementById("temp1");
-            const clean = document.getElementById("temp1");
-            clean.remove();}}
+            document.getElementById("temp1").remove();}}
 </script>
 <script>
     function side3switch(){
@@ -71,16 +72,26 @@
         if(currentvalue == "Off"){
             document.getElementById("btn2").value="On";
             const paro = document.createElement("div");
-            paro.id = "temp2";
-            paro.innerHTML = '<embed src="side3Butikk.html">';
+            paro.innerHTML = '<embed src="side3Butikk.html" id="temp2">';
             document.getElementById("gr").appendChild(paro);
-            const swap = document.getElementById("temp1");
-            swap.remove();
-            document.getElementById("btn1").value="Off";}
+            document.querySelectorAll("#temp3,#temp1").forEach(e => e.remove());
+            document.querySelectorAll("#btn3,#btn1").forEach(e => e.value = "Off");}
         else{
             document.getElementById("btn2").value="Off";
-            document.getElementById("temp2");
-            const clean = document.getElementById("temp2");
-            clean.remove();}}
+            document.getElementById("temp2").remove();}}
+</script>
+<script>
+    function side4switch(){
+        currentvalue = document.getElementById("btn3").value;
+        if(currentvalue == "Off"){
+            document.getElementById("btn3").value="On";
+            const pari = document.createElement("div");
+            pari.innerHTML = '<embed src="side3Nyheter.html" id="temp3">';
+            document.getElementById("gr").appendChild(pari);
+            document.querySelectorAll("#temp1,#temp2").forEach(e => e.remove());
+            document.querySelectorAll("#btn1,#btn2").forEach(e => e.value = "Off");}
+        else{
+            document.getElementById("btn3").value="Off";
+            document.getElementById("temp3").remove();}}
 </script>
 </html>
