@@ -12,13 +12,16 @@
 <body>
     <header id="MainHeader">
         <img src="Logo.svg" alt="KSU-3D" id="LogoHeader">
-       <h1 id="OrderButton">Order</h1>
-       <h1 id="SupportButton">Support</h1>
-       <h1 id="InfoButton">More information</h1>
+       <a id="OrderButton">Order</a>
+       <a id="SupportButton">Support</a>
+       <button id="InfoButton" onclick="{document.getElementById('MainContent').src='Information.html'}">More information</button>
     </header>
     <div class="scrolling-text">
         <p>FREE SHIPPING RAHHHH</p>
     </div>
+    <iframe id="MainContent" style="width: 100%; flex-grow: 1;">
+        
+    </iframe>
 
     <script src="Scripts/ScrollingText.js"></script>
 </body>
