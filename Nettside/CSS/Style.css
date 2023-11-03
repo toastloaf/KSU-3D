@@ -4,6 +4,8 @@ body {
     font-family: "Exo 2", sans-serif;
 }
 
+/* Index */
+
 #LogoHeader {
     width: 20%;
     transform: translateX(7%);
@@ -28,8 +30,8 @@ header {
 }
 
 #OrderButton:hover, #SupportButton:hover, #InfoButton:hover {
-    background-color: #f2f2f2;
-    color: #1a1a1a;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
 }
 
 .scrolling-text {
@@ -42,4 +44,18 @@ header {
     white-space: nowrap;
     font-size: 1.5rem;
     font-family: "Exo 2", sans-serif;
+}
+
+/* Information */
+
+.Bio {
+    width: 1200px;
+    background-color: #f2f2f2;
+    color: #1a1a1a;
+    border: 1px;
+    border-radius: 20px;
+}
+
+.Bio_content {
+    position: relative; left: 20px;
 }
