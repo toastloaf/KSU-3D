@@ -1,34 +1,31 @@
-CREATE DATABASE IF NOT EXISTS `ksu3d`;
 
-USE `ksu3d`;
-
--- Table for customers
-CREATE TABLE IF NOT EXISTS `customers` (
-    `name` VARCHAR(50) NOT NULL,
-    `email` VARCHAR(50) NOT NULL,
-    `phone` VARCHAR(20) NOT NULL,
-    `address` VARCHAR(100) NOT NULL,
-    PRIMARY KEY (`id`)
+-- Create the "products" table to store information about each product
+CREATE TABLE products (
+  id INT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2) NOT NULL,
+  image_url VARCHAR(255)
 );
 
--- Table for 3D models
-CREATE TABLE IF NOT EXISTS `models` (
-    `id` INT(11) NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(50) NOT NULL,
-    `description` VARCHAR(255) NOT NULL,
-    `file_path` VARCHAR(255) NOT NULL,
-    `price` DECIMAL(10, 2) NOT NULL,
-    PRIMARY KEY (`id`)
+-- Create the "orders" table to store information about each order
+CREATE TABLE orders (
+  id INT PRIMARY KEY,
+  customer_name VARCHAR(255) NOT NULL,
+  customer_email VARCHAR(255) NOT NULL,
+  customer_phone VARCHAR(20) NOT NULL,
+  shipping_address TEXT NOT NULL,
+  total_price DECIMAL(10, 2) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Table for orders
-CREATE TABLE IF NOT EXISTS `orders` (
-    `id` INT(11) NOT NULL AUTO_INCREMENT,
-    `customer_id` INT(11) NOT NULL,
-    `model_id` INT(11) NOT NULL,
-    `quantity` INT(11) NOT NULL,
-    `total_price` DECIMAL(10, 2) NOT NULL,
-    `order_date` DATETIME NOT NULL,
-    PRIMARY KEY (`id`),
-    FOREIGN KEY (`model_id`) REFERENCES `models`(`id`)
+-- Create the "order_items" table to store information about each item in an order
+CREATE TABLE order_items (
+  id INT PRIMARY KEY,
+  order_id INT NOT NULL,
+  product_id INT NOT NULL,
+  quantity INT NOT NULL,
+  price DECIMAL(10, 2) NOT NULL,
+  FOREIGN KEY (order_id) REFERENCES orders(id),
+  FOREIGN KEY (product_id) REFERENCES products(id)
 );
