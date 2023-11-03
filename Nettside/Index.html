@@ -11,18 +11,18 @@
 </head>
 <body>
     <header id="MainHeader">
-        <img src="Logo.svg" alt="KSU-3D" id="LogoHeader">
+        <img src="Logo.svg" alt="KSU-3D" id="LogoHeader" onclick="">
        <a id="OrderButton">Order</a>
        <a id="SupportButton">Support</a>
        <button id="InfoButton" onclick="{document.getElementById('MainContent').src='Information.html'}">More information</button>
     </header>
     <div class="scrolling-text">
-        <p>FREE SHIPPING RAHHHH</p>
+        <p>FREE SHIPPING ON ORDERS ABOVE 500 NOK</p>
     </div>
-    <iframe id="MainContent" style="width: 100%; flex-grow: 1;">
-        
+    <iframe id="MainContent">
     </iframe>
 
+    <script src="Scripts/FadeIn.js"></script>
     <script src="Scripts/ScrollingText.js"></script>
 </body>
 </html>
