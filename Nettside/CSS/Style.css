@@ -79,4 +79,34 @@ header {
 }
 .employee-description {
     margin-top: 5px;
+}input {
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+    font-family: "Exo 2", sans-serif;
+    border: 3px solid #f2f2f2;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+input {
+    outline: none;
+    border-color: #f2f2f2;
+}
+
+select {
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+    font-family: "Exo 2", sans-serif;
+    border: 3px solid #f2f2f2;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+select:focus {
+    outline: none;
+    border-color: #f2f2f2;
 }
