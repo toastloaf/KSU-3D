@@ -32,18 +32,6 @@ header {
     color: #f2f2f2;
 }
 
-.scrolling-text {
-    overflow: hidden;
-    border-bottom: 3px solid #f2f2f2;
-}
-
-.scrolling-text p {
-    display: inline-block;
-    white-space: nowrap;
-    font-size: 1.5rem;
-    font-family: "Exo 2", sans-serif;
-}
-
 #MainContent {
     width: 100%;
     height: calc(100vh - 100px); /* assuming there is a 100px header */
