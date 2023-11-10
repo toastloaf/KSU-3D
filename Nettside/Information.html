@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="CSS/Style.css">
-</head>
-<body>
-    <h1>About Us</h1>
-    <div class="employee-box">
-        <div class="employee-name">Jonas</div>
-        <div class="employee-title">(Enter title here)</div>
-        <div class="employee-description">han er furry</div>
-        <img class="employee-image" src="static/jonas.gif">
-    </div>
-    <div class="employee-box">
-        <div class="employee-name">Example 2</div>
-        <div class="employee-title">JOB</div>
-        <div class="employee-description">This is a job description.</div>
-    </div>
-    <div class="employee-box">
-        <div class="employee-name">Example 3</div>
-        <div class="employee-title">JOB</div>
-        <div class="employee-description">This is a job description.</div>
-    </div>
-    <div class="employee-box">
-        <div class="employee-name">Example 4</div>
-        <div class="employee-title">JOB</div>
-        <div class="employee-description">This is a job description.</div>
-    </div>
-    <div class="employee-box">
-        <div class="employee-name">Example 5</div>
-        <div class="employee-title">JOB</div>
-        <div class="employee-description">This is a job description</div>
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us</title>
+        <link rel="stylesheet" href="CSS/Style.css">
+        <script src="/Nettside/Scripts/HideBox.js"></script>
+    </head>
+    <body>
+            <h1>About Us</h1>
+            <div id="Jonas" class="employee-box" onclick="hide()">
+                <div class="employee-name">Jonas</div>
+                <div class="employee-title">(Enter title here)</div>
+                <div class="employee-description">han er furry</div>
+                <img class="employee-image" src="static/jonas.gif">
+            </div>
+            <div id="Henrik" class="employee-box" onclick="hide2()">
+                <div class="employee-name">Henrik</div>
+                <div class="employee-title">Økonomiansvarlig</div>
+                <div class="employee-description">
+                    Som økonomiansvarlig er min primære oppgave å lede KSU-3D gjennom økonomiske strategier som sikrer selskapets bærekraft og vekst. Jeg er forpliktet til å sikre økonomisk stabilitet, og gjennom mine ferdigheter og erfaringer bidrar jeg til å styrke fundamentet for vår virksomhet. <br>
+                    Jeg tar ansvar for å overvåke og analysere økonomiske transaksjoner, budsjetter og regnskaper med en presisjon som sikrer samsvar med bransjestandarder. Gjennom strategisk planlegging og kostnadseffektivitetsanalyser søker jeg kontinuerlig etter muligheter for å optimalisere selskapets økonomiske ressurser. <br>
+                    Min rolle går utover tallene - jeg er også engasjert i å skape økonomisk trygghet for våre ansatte og å bidra til en positiv arbeidskultur. Gjennom å opprettholde transparente og tillitsvekkende relasjoner med interessenter, inkludert medarbeidere, kunder og leverandører, bidrar jeg til å bygge et sterkt fundament for selskapets eksistens.</div>
+            </div>
+            <div id="Kim" class="employee-box" onclick="hide3()">
+                <div class="employee-name">Kim </div>
+                <div class="employee-title">Daglig leder</div>
+                <div class="employee-description">
+                    Som daglig leder har jeg forpliktet meg til å lede vårt selskap på en måte som sikrer og styrker vår posisjon i markedet. Mitt overordnede mål er å skape en trygg og bærekraftig fremtid for selskapet og våre dedikerte medarbeidere. <br>
+                    Jeg tar ansvar for å forme strategier som sikrer selskapets suksess og kontinuerlige vekst. Gjennom nøye planlegging og effektiv ledelse arbeider jeg for å utvikle en organisasjonskultur preget av innovasjon, integritet og samarbeid. <br>
+                    Min visjon er å skape et miljø der våre medarbeidere blomstrer, og deres potensial blir maksimert. Jeg legger vekt på å bygge sterke relasjoner både internt og eksternt, og jeg er dedikert til å opprettholde et høyt nivå av profesjonalitet i alle aspekter av selskapets virksomhet. </div>
+            </div>
+            <div id="Laszlo" class="employee-box" onclick="hide4()">
+                <div class="employee-name">Example 4</div>
+                <div class="employee-title">JOB</div>
+                <div class="employee-description">This is a job description.</div>
+            </div>
+            <div id="Vegar" class="employee-box" onclick="hide5()">
+                <div class="employee-name">Example 5</div>
+                <div class="employee-title">JOB</div>
+                <div class="employee-description">This is a job description</div>
+            </div>
+            <div id="outside" class="" onclick="deselect()"></div>
+    </body>
+
 </html>

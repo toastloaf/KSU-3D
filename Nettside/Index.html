@@ -9,23 +9,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Roboto:wght@100;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/Style.css">
 </head>
+<script> // resizes the iframe to the size of your browser
+    function resizeIframe(obj) {
+    obj.style.height = (window.innerHeight-131)+"px";
+    obj.style.width = (window.innerWidth-80)+"px";
+    }
+</script>
 <body>
     <header id="MainHeader">
         <img src="Logo.svg" alt="KSU-3D" id="LogoHeader" onclick="">
         <button id="OrderButton" onclick="document.getElementById('MainContent').src='Order.html'">Order</button>
-        <button id="SupportButton">Support</button>
+        <button id="SupportButton"onclick="document.getElementById('MainContent').src='Support.html'">Support</button>
         <button id="InfoButton" onclick="document.getElementById('MainContent').src='Information.html'">More information</button>
         <div id="SocialMediaButtons">
-            <a href="https://www.facebook.com"><img src="facebook.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com"><img src="instagram.png" alt="Instagram"></a>
-            <a href="https://www.tiktok.com"><img src="tiktok.png" alt="TikTok"></a>
-            <a href="https://www.youtube.com"><img src="youtube.png" alt="YouTube"></a>
+            <a href="https://www.facebook.com" target=”_blank”><img src="facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com" target=”_blank”><img src="instagram.png" alt="Instagram"></a>
+            <a href="https://www.tiktok.com" target=”_blank”><img src="tiktok.png" alt="TikTok"></a>
+            <a href="https://www.youtube.com" target=”_blank”><img src="youtube.png" alt="YouTube"></a>
         </div>
     </header>
     <div class="scrolling-text">
         <p>FREE SHIPPING ON ORDERS ABOVE 500 NOK</p>
     </div>
-    <iframe id="MainContent">
+
+    <iframe id="MainContent" onload="resizeIframe(this)">
     </iframe>
 
     <script src="Scripts/FadeIn.js"></script>
