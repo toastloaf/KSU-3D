@@ -8,19 +8,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Roboto:wght@100;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/Style.css">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 10px;
+        }
+        .item-box {
+            border: 2px solid #000;
+            padding: 10px;
+            min-height: 100px; /* Set a minimum height */
+        }
+        .item-box img {
+            width: 100%;
+            height: auto;
+        }
+        .item-box h2, .item-box p {
+            margin: 0;
+        }
+        .item-box:hover {
+            transform: scale(1.05); /* Makes the box slightly larger */
+            transition: transform 0.3s ease-in-out; /* Animates the transformation */
+        }
+    </style>
 </head>
 <body>
-    <h1 style="font-size: 300%;">Customized Order</h1>
-    <p style="font-size: 150%;">Please enter your email</p>
-    <input placeholder="Enter your email here">
-    <p style="font-size: 150%;">Please upload your STL file(s) here</p>
-    <input type="file" id="UploadedFile" name="filename" accept=".stl">
-    <p style="font-size: 150%;">Please enter your desired material</p>
-    <select name="Material" id="Material">
-        <option value="PLA">PLA</option>
-        <option value="ABS">ASA</option>
-    </select>
-    <br>
-    <button id="AddToCartButton">Add to cart</button>
+    <div class="grid-container">
+        <div class="item-box">
+            <img src="static/clip.png" alt="Bag Clip" id="imgOrder">
+            <h2>Bag Clip</h2>
+            <p>It's a bag clip, yeah.</p>
+            <button id="ATCB">Add To Cart</button>
+        </div>
+        <div class="item-box">
+            <img src="item-image.jpg" alt="Item Image">
+            <h2>Item Title</h2>
+            <p>Item Description</p>
+        </div>
+        <!-- Add more item boxes as needed -->
+    </div>
 </body>
 </html>
