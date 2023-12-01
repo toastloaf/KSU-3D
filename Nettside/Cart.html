@@ -14,6 +14,23 @@
 </head>
 <body>
     <h1 id="empty">Your cart is empty.</h1>
+    <div>
+        <div style="border-style: solid; border-radius: 10px; scale: 70%;">
+            <h1 id="item1"></h1>
+            <img id="item1img">
+        </div>
+    </div>
 </body>
-<script src="Scripts/Cart.js"></script>
+<script>
+    if (window.localStorage.getItem("cartItems") == null) {
+        document.getElementById("empty").style.display = "block";
+    }
+    else {
+        document.getElementById("empty").style.display = "none";
+        document.getElementById("item1").innerHTML = window.localStorage.getItem("cartItems");
+        if (window.localStorage.getItem("cartItems") == "BagClip") {
+            document.getElementById("item1img").src = "static/clip.png";
+        }
+    }
+</script>
 </html>

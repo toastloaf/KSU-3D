@@ -48,4 +48,11 @@
         <!-- Add more item boxes as needed -->
     </div>
 </body>
+<script>
+    // Add to cart button
+    document.getElementById("ATCB").addEventListener("click", function() {
+        alert("Added to cart!");
+        window.localStorage.setItem("cartItems", "BagClip");
+    });
+</script>
 </html>
