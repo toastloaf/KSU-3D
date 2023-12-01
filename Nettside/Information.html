@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="CSS/Style.css">
 </head>
 <style>
-    .fighter_select td{width: 25%;}
+    .fighter_select td{width: 20%;}
+    .fighter_select td:hover{
+        transform: scale(1.05); /* Makes the box slightly larger */
+        transition: transform 0.3s ease-in-out; /* Animates the transformation */}
     td{background-color: red;}
 </style>
 <body>
@@ -39,10 +42,6 @@
         <div class="employee-description">Jeg hjelper andre</div>
     </div>
     <!-- <table>
-        <tr>
-            <td><img src="static/jonas.gif"></td>
-            <td><h1>Jonas</h1></td>
-        </tr>
         <tr class="fighter_select">
             <td><img></td>
             <td><img></td>
@@ -51,5 +50,14 @@
             <td><img></td>
         </tr>
     </table> -->
+<table style="width: 100%;">
+    <tr class="fighter_select">
+        <td><img src="static/jonas.gif"></td>
+        <td><img src="static/jonas.gif"></td>
+        <td><img src="static/jonas.gif"></td>
+        <td><img src="static/jonas.gif"></td>
+        <td><img src="static/jonas.gif"></td>
+    </tr>
+</table>
 </body>
 </html>
