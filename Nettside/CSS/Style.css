@@ -14,7 +14,7 @@ header {
     border-bottom: 3px solid #f2f2f2;
 }
 
-#OrderButton, #SupportButton, #InfoButton {
+#OrderButton, #SupportButton, #InfoButton, #CostumButton {
     position: relative;
     bottom: 3.5ch;
     display: inline-block;
@@ -27,7 +27,7 @@ header {
     transition: all 0.3s ease-in-out;
 }
 
-#OrderButton:hover, #SupportButton:hover, #InfoButton:hover {
+#OrderButton:hover, #SupportButton:hover, #InfoButton:hover, #CostumButton:hover {
     background-color: #1a1a1a;
     color: #f2f2f2;
 }
