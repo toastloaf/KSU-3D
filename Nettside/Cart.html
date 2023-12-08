@@ -22,6 +22,10 @@
     </div>
 </body>
 <script>
+        // This code checks if the "cartItems" value is stored in the browser's local storage.
+        // If it is not present, it displays the element with the id "empty".
+        // If it is present, it hides the element with the id "empty" and displays the stored value in the element with the id "item1".
+        // If the stored value is "BagClip", it also updates the source of the image element with the id "item1img" to display a clip.png image.
     if (window.localStorage.getItem("cartItems") == null) {
         document.getElementById("empty").style.display = "block";
     }
