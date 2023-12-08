@@ -18,6 +18,7 @@
         <div style="border-style: solid; border-radius: 10px; scale: 70%;">
             <h1 id="item1"></h1>
             <img id="item1img">
+            <button onclick="CartRemove()" id="RemoveAll">remove</button>
         </div>
     </div>
 </body>
@@ -28,6 +29,8 @@
         // If the stored value is "BagClip", it also updates the source of the image element with the id "item1img" to display a clip.png image.
     if (window.localStorage.getItem("cartItems") == null) {
         document.getElementById("empty").style.display = "block";
+        document.getElementById("RemoveAll").remove()
+
     }
     else {
         document.getElementById("empty").style.display = "none";
@@ -39,7 +42,7 @@
 </script>
 <script>
     function CartRemove(){
-        window.localStorage.set
+        window.localStorage.removeItem("cartItems")
     }
 </script>
 </html>
