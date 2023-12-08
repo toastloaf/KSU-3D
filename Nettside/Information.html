@@ -7,11 +7,22 @@
     <link rel="stylesheet" href="CSS/Style.css">
 </head>
 <style>
-    .fighter_select td{width: 20%;}
+    .fighter_select td{text-align:center ;}
     .fighter_select td:hover{
         transform: scale(1.05); /* Makes the box slightly larger */
         transition: transform 0.3s ease-in-out; /* Animates the transformation */}
     td{background-color: red;}
+    .container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bottom-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
 </style>
 <body>
     <h1>About Us</h1>
@@ -50,14 +61,25 @@
             <td><img></td>
         </tr>
     </table> -->
+    <div class="container">
+        <img src="static/jonas.gif" alt="Snow" style="width:100%;">
+        <div class="bottom-left">Bottom Left</div>
+    </div>
 <table style="width: 100%;">
     <tr class="fighter_select">
-        <td><img src="static/jonas.gif"></td>
-        <td><img src="static/jonas.gif"></td>
-        <td><img src="static/jonas.gif"></td>
-        <td><img src="static/jonas.gif"></td>
-        <td><img src="static/jonas.gif"></td>
+        <td onclick="selected1()"><h1>Jonas</h1></td>
+        <td><h1>Vegar</h1></td>
+        <td><h1>Laszlo</h1></td>
+        <td><h1>Kim</h1></td>
+        <td><h1>Henrik</h1></td>
     </tr>
 </table>
 </body>
 </html>
+<script>
+    function selected1(){
+        document.getElementById(selection).innerHTML = 'src=""'
+        document.querySelectorAll()
+    }
+
+</script>
