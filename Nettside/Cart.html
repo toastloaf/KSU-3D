@@ -11,9 +11,6 @@
             margin-top: 15%;
         }
     </style>
-    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
-
-        <META HTTP-EQUIV="EXPIRES" CONTENT="-1">
 </head>
 <body>
     <h1 id="empty">Your cart is empty.</h1>
@@ -21,7 +18,7 @@
         <div style="border-style: solid; border-radius: 10px; scale: 70%;">
             <h1 id="item1"></h1>
             <img id="item1img">
-            <button onclick="CartRemoveAll" id="RemoveAll">remove</button>
+            <button onclick="CartRemoveAll()" id="RemoveAll">remove</button>
         </div>
     </div>
 </body>
@@ -33,7 +30,6 @@
     if (window.localStorage.getItem("cartItems") == null) {
         document.getElementById("empty").style.display = "block";
         document.getElementById("RemoveAll").remove()
-        location.reload()
 
     }
     else {
@@ -47,7 +43,7 @@
 <script>
     function CartRemoveAll(){
         window.localStorage.removeItem("cartItems");
-        window.location.reload(true)
+        location.reload()
     }
 </script>
 </html>
