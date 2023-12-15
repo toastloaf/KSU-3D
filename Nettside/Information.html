@@ -1,88 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="CSS/Style.css">
-</head>
-<style>
-    .fighter_select td{text-align:center ;}
-    .fighter_select td:hover{
-        transform: scale(1.05); /* Makes the box slightly larger */
-        transition: transform 0.3s ease-in-out; /* Animates the transformation */}
-    td{background-color: red;}
-    .container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us</title>
+        <link rel="stylesheet" href="CSS/Style.css">
+    </head>
+    <style>
+        .fighter_select td{text-align:center ; position: relative; top: 200px;}
+        .fighter_select td:hover{
+            transform: scale(1.05); /* Makes the box slightly larger */
+            transition: transform 0.3s ease-in-out; /* Animates the transformation */}
+        td{background-color: lightgray;}
+        .container {
+        position: relative;
+        text-align: center;
+        color: white;
+        }
 
-.bottom-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-</style>
-<body>
-    <h1>About Us</h1>
-    <p>vi er et lag av elever fra kristiansund vidregående skole som driver med 3d-printing. vi tror at 3d-printing skaper mange muligheter for folk, men i dag er det ikke tilgjengelig for mange, så vi har bestemt oss til å skape denne bedriften til å fikse dette.
-    <br>vår bedrift tilbyr kunder evnen til å bruke 3d-printerne til oss for å printe deres egne produkt, eller til å kjøpe produkt som vi har designet selv fra vår nettbutikk</p>
-    <h1>Meet the team</h1>
-    <div class="employee-box">
-        <div class="employee-name">Jonas</div>
-        <div class="employee-title">Influenser </div>
-        <div class="employee-description">han er furry</div>
-        <img class="employee-image" src="static/jonas.gif">
-    </div>
-    <div class="employee-box">
-        <div class="employee-name">Kim</div>
-        <div class="employee-title">Daglig leder</div>
-        <div class="employee-description">This is a job description.</div>
-    </div>
-    <div class="employee-box">
-        <div class="employee-name">Henrik</div>
-        <div class="employee-title">Økonomiansvarlig </div>
-        <div class="employee-description">This is a job description.</div>
-    </div>
-    <div class="employee-box">
-        <div class="employee-name">Lazlo</div>
-        <div class="employee-title">produksjonsansvarlig </div>
-        <div class="employee-description">This is a job description.</div>
-    </div>
-    <div class="employee-box">
-        <div class="employee-name">Vegar</div>
-        <div class="employee-title">Med-arbeider</div>
-        <div class="employee-description">Jeg hjelper andre</div>
-    </div>
-    <!-- <table>
-        <tr class="fighter_select">
-            <td><img></td>
-            <td><img></td>
-            <td><img></td>
-            <td><img></td>
-            <td><img></td>
-        </tr>
-    </table> -->
-    <div class="container">
-        <img src="static/jonas.gif" alt="Snow" style="width:100%;">
-        <div class="bottom-left">Bottom Left</div>
-    </div>
-<table style="width: 100%;">
-    <tr class="fighter_select">
-        <td onclick="selected1()"><h1>Jonas</h1></td>
-        <td><h1>Vegar</h1></td>
-        <td><h1>Laszlo</h1></td>
-        <td><h1>Kim</h1></td>
-        <td><h1>Henrik</h1></td>
-    </tr>
-</table>
-</body>
+        .bottom-left {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        }
+    </style>
+
+    <body onload="selected1()">
+        <h1>About Us</h1>
+        <p>Vi er et lag av elever fra kristiansund vidregående skole som driver med 3d-printing. Vi mener at 3d-printing skaper mange muligheter for kreativitet og produktivitet, .
+        <br>vår bedrift tilbyr kunder evnen til å bruke 3d-printerne til oss for å printe deres egne produkt, eller til å kjøpe produkt som vi har designet selv fra vår nettbutikk</p>
+        <h1>Meet the team</h1>
+        </div>
+
+        <div id="selection">
+        </div>
+
+        <table style="width: 100%; position: absolute; top: 490px;">
+            <tr class="fighter_select">
+                <td onclick="selected1()"><h1>Jonas</h1></td>
+                <td onclick="selected2()"><h1>Vegar</h1></td>
+                <td onclick="selected3()"><h1>Laszlo</h1></td>
+                <td onclick="selected4()"><h1>Kim</h1></td>
+                <td onclick="selected5()"><h1>Henrik</h1></td>
+            </tr>
+        </table>
+    </body>
 </html>
 <script>
     function selected1(){
-        document.getElementById(selection).innerHTML = 'src=""'
-        document.querySelectorAll()
+        document.getElementById("selection").innerHTML = '<p style="display: inline-block; position: absolute; top: 250px; left: 600px">Jonas er en av våre markedsførere.</p>'
+    }
+    function selected2(){
+        document.getElementById("selection").innerHTML = '<p style="display: inline-block; position: absolute; top: 250px; left: 600px">Vegar er en av våre utviklere.</p>'
+    }
+    function selected3(){
+        document.getElementById("selection").innerHTML = '<p style="display: inline-block; position: absolute; top: 250px; left: 600px">Laszlo er vår produksjonsansvarlig.</p>'
+    }
+    function selected4(){
+        document.getElementById("selection").innerHTML = '<p style="display: inline-block; position: absolute; top: 250px; left: 600px">Kim er vår daglig leder og markedsfører.</p>'
+    }
+    function selected5(){
+        document.getElementById("selection").innerHTML = '<p style="display: inline-block; position: absolute; top: 250px; left: 600px">Henrik er vår økonom.</p>'
     }
 
 </script>
