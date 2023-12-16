@@ -48,6 +48,19 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+#BNB {
+    position: relative;
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 1rem;
+    padding: 0.5rem 4rem;
+    border: 3px solid #f2f2f2;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: orange;
+}
+
 #RemoveAll {
     position: fixed;
     display: inline-block;

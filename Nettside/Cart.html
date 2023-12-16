@@ -14,36 +14,50 @@
 </head>
 <body>
     <h1 id="empty">Your cart is empty.</h1>
-    <div>
-        <div style="border-style: solid; border-radius: 10px; scale: 60%;">
-            <h1 id="item1"></h1>
-            <img id="item1img">
-            <button onclick="CartRemoveAll()" id="RemoveAll">Fjern</button>
-        </div>
-    </div>
+        <div id="itemContainer" style="border-style: solid; border-radius: 10px; scale: 60%;"></div>
 </body>
 <script>
-        // This code checks if the "cartItems" value is stored in the browser's local storage.
-        // If it is not present, it displays the element with the id "empty".
-        // If it is present, it hides the element with the id "empty" and displays the stored value in the element with the id "item1".
-        // If the stored value is "BagClip", it also updates the source of the image element with the id "item1img" to display a clip.png image.
-    if (window.localStorage.getItem("cartItems") == null) {
-        document.getElementById("empty").style.display = "block";
-        document.getElementById("RemoveAll").remove()
+    // Get cart from local storage or initialize to an empty array if it doesn't exist
+    let cart = JSON.parse(window.localStorage.getItem('cartItems')) || [];
+    console.log(cart)
 
-    }
-    else {
-        document.getElementById("empty").style.display = "none";
-        document.getElementById("item1").innerHTML = "Poseklemme x20";
-        if (window.localStorage.getItem("cartItems") == "BagClip") {
-            document.getElementById("item1img").src = "static/clip.png";
+    // Update cart display
+    function updateCart() {
+        const emptyElement = document.getElementById('empty');
+        const itemContainer = document.getElementById('itemContainer');
+
+        // If cart is empty
+        if (cart.length === 0) {
+            emptyElement.style.display = 'block';
+            itemContainer.style.display = 'none';
+        } else {
+            emptyElement.style.display = 'none';
+            itemContainer.style.display = 'block';
+
+            // Clear existing items
+            itemContainer.innerHTML = '';
+
+            // Add each item in the cart to the display
+            cart.forEach((item, index) => {
+                const itemElement = document.createElement('div');
+                itemElement.innerHTML = `
+                    <h1>${item.name} x${item.quantity}</h1>
+                    <img src="static/${item.image}">
+                    <button onclick="removeItem(${index})">Remove</button>
+                `;
+                itemContainer.appendChild(itemElement);
+            });
         }
     }
-</script>
-<script>
-    function CartRemoveAll(){
-        window.localStorage.removeItem("cartItems");
-        location.reload()
+
+    // Remove item from cart
+    function removeItem(index) {
+        cart.splice(index, 1);
+        window.localStorage.setItem('cartItems', JSON.stringify(cart));
+        updateCart();
     }
+
+    // Call updateCart on page load
+    updateCart();
 </script>
 </html>
