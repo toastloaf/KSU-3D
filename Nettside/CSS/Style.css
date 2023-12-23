@@ -11,30 +11,38 @@ body {
 }
 
 #OrderButton, #SupportButton, #InfoButton, #CostumButton, #CartButton {
+    border-radius: 4px;
     position: relative;
     bottom: 3.5ch;
     display: inline-block;
     font-size: 1.5rem;
-    padding: 0.5rem 4rem;
-    border: 3px solid #f2f2f2;
-    border-radius: 5px;
+    padding: 0.5rem 0; /* Adjust padding to remove horizontal padding */
     margin-left: 2rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    text-decoration: none; /* Removes default underline */
+    color: #000; /* Adjust text color as needed */
+    border: none; /* Removes border */
+    outline: none; /* Removes focus outline */
+    width: 10%;
 }
 
-#CartButton {
-    position: relative;
-    bottom: 3.5ch;
-    display: inline-block;
-    font-size: 1.5rem;
-    padding: 0.5rem 4rem;
-    border: 3px solid #f2f2f2;
-    border-radius: 5px;
-    margin-left: 15%;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+#OrderButton::after, #SupportButton::after, #InfoButton::after, #CostumButton::after, #CartButton::after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px; /* Thickness of the underline */
+    width: 0;
+    background: blue; /* Color of the underline */
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: 0; /* Adjust position of underline */
 }
+
+#OrderButton:hover::after, #SupportButton:hover::after, #InfoButton:hover::after, #CostumButton:hover::after, #CartButton:hover::after {
+    width: 100%; /* Expands the underline to full width on hover */
+}
+
 
 #ATCB {
     position: relative;
@@ -76,16 +84,6 @@ body {
 
 #imgOrder {
     width: 80%;
-}
-
-#ATCB:hover {
-    background-color: #1a1a1a;
-    color: #f2f2f2;
-}
-
-#OrderButton:hover, #SupportButton:hover, #InfoButton:hover, #CartButton:hover, #CostumButton:hover {
-    background-color: #1a1a1a;
-    color: #f2f2f2;
 }
 
 #MainContent {
