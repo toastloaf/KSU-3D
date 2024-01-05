@@ -9,16 +9,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Roboto:wght@100;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/Style.css">
 </head>
+<style>
+    header{
+        width:100%;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 1;
+        height: 120px;
+    }
+</style>
 <body style="color: white;">
-    <header id="MainHeader" style="background-color: lightgrey;">
+    <header id="MainHeader" style="background-color: lightgrey">
         <img src="static/KSU-3D.svg" alt="KSU-3D" id="LogoHeader" onclick="document.getElementById('MainContent').src='Information.html'">
         <button id="OrderButton" onclick="document.getElementById('MainContent').src='Order.html'">Order</button>
         <button id="InfoButton" onclick="document.getElementById('MainContent').src='Information.html'">Main</button>
         <button id="CostumButton" onclick="document.getElementById('MainContent').src='costum.html'">Custom Order</button>
         <button id="CartButton" onclick="document.getElementById('MainContent').src='Cart.html'"><img src="static/cart-removebg-preview.png" style="width: 20px;"></button>
     </header>
-    <iframe id="MainContent" src="Information.html" style="background-color: white;">
+    <iframe id="MainContent" src="Information.html" style="background-color: white;top: 120px;position: relative;">
     </iframe>
+
 
     <script src="Scripts/FadeIn.js"></script>
     <!-- <script src="Scripts/ScrollingText.js"></script> fucking useless delete this shit later-->
