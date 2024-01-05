@@ -10,7 +10,7 @@ body {
     position: relative; top: -5px;
 }
 
-#OrderButton, #SupportButton, #InfoButton, #CostumButton, #CartButton {
+#OrderButton, #InfoButton, #CostumButton, #CartButton {
     border-radius: 4px;
     background-color: lightgray;
     position: relative;
@@ -27,11 +27,11 @@ body {
     outline: none; /* Removes focus outline */
     width: 10%;
 }
-#OrderButton:hover, #SupportButton:hover, #InfoButton:hover, #CostumButton:hover, #CartButton:hover {
+#OrderButton:hover, #InfoButton:hover, #CostumButton:hover, #CartButton:hover {
     color:blue ;
 }
 
-#OrderButton::after, #SupportButton::after, #InfoButton::after, #CostumButton::after, #CartButton::after {
+#OrderButton::after, #InfoButton::after, #CostumButton::after, #CartButton::after {
     content: '';
     display: block;
     margin: auto;
@@ -43,7 +43,7 @@ body {
     bottom: 0; /* Adjust position of underline */
 }
 
-#OrderButton:hover::after, #SupportButton:hover::after, #InfoButton:hover::after, #CostumButton:hover::after, #CartButton:hover::after {
+#OrderButton:hover::after, #InfoButton:hover::after, #CostumButton:hover::after, #CartButton:hover::after {
     width: 100%; /* Expands the underline to full width on hover */
 }
 
