@@ -12,6 +12,7 @@ body {
 
 #OrderButton, #SupportButton, #InfoButton, #CostumButton, #CartButton {
     border-radius: 4px;
+    background-color: lightgray;
     position: relative;
     bottom: 3.5ch;
     display: inline-block;
@@ -25,6 +26,9 @@ body {
     border: none; /* Removes border */
     outline: none; /* Removes focus outline */
     width: 10%;
+}
+#OrderButton:hover, #SupportButton:hover, #InfoButton:hover, #CostumButton:hover, #CartButton:hover {
+    color:blue ;
 }
 
 #OrderButton::after, #SupportButton::after, #InfoButton::after, #CostumButton::after, #CartButton::after {
