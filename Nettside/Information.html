@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="CSS/Style.css">
     </head>
     <style>
-        .fighter_select td{text-align:center ; position: relative; top: 200px;}
+        .fighter_select td{text-align:center ; top: 200px;}
         .fighter_select td:hover{
             transform: scale(1.05); /* Makes the box slightly larger */
             transition: transform 0.3s ease-in-out; /* Animates the transformation */}
@@ -17,12 +17,11 @@
         text-align: center;
         color: white;
         }
-
-        .bottom-left {
-        position: absolute;
-        top: 8px;
-        left: 16px;
-        }
+        #selectio {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
     </style>
 
     <body onload="selected1()">
@@ -38,34 +37,35 @@
     <a href="https://www.tiktok.com/@ksu_3d_ub" target="_blank"><img src="/Nettside/static/tiktok-logo.png" alt="TikTok" class="link_icon">TikTok</a>
     <a href="https://www.youtube.com/channel/UCTrfMcTF8noBVCc71_oBUfA" target="_blank"><img src="/Nettside/static/youtube-logo.png" alt="YouTube" class="link_icon">YouTube</a>
 </div>
-        <div id="selection">
-        </div>
-
-        <table style="width: 100%; position: absolute; top: 490px;">
-            <tr class="fighter_select">
-                <td onclick="selected1()"><h1>Jonas</h1></td>
-                <td onclick="selected2()"><h1>Vegar</h1></td>
-                <td onclick="selected3()"><h1>Laszlo</h1></td>
-                <td onclick="selected4()"><h1>Kim</h1></td>
-                <td onclick="selected5()"><h1>Henrik</h1></td>
-            </tr>
-        </table>
+<div class="container">
+    <img src="static/jonas.gif" alt="Snow" style="width:100%;background-color: blueviolet;">
+    <div id="selection">Top Right</div>
+</div>        
+<table style="width: 100%;">
+    <tr class="fighter_select">
+        <td onclick="selected1()"><h1>Jonas</h1></td>
+        <td onclick="selected2()"><h1>Vegar</h1></td>
+        <td onclick="selected3()"><h1>Laszlo</h1></td>
+        <td onclick="selected4()"><h1>Kim</h1></td>
+        <td onclick="selected5()"><h1>Henrik</h1></td>
+    </tr>
+</table>
 </html>
 <script>
     function selected1(){
-        document.getElementById("selection").innerHTML = '<p style="display: inline-block; position: absolute; top: 250px; left: 600px">Jonas er en av våre markedsførere.</p>'
+        document.getElementById("selection").innerHTML = '<div id="selection" style="position: absolute;top: 8px;right: 16px;color:black">Jonas er vår marketsansvarlig</div>'
     }
     function selected2(){
-        document.getElementById("selection").innerHTML = '<p style="display: inline-block; position: absolute; top: 250px; left: 600px">Vegar er en av våre utviklere.</p>'
+        document.getElementById("selection").innerHTML = '<div id="selection" style="position: absolute;top: 8px;right: 16px;color:black">Vegar er en av våre utviklere.</div>'
     }
     function selected3(){
-        document.getElementById("selection").innerHTML = '<p style="display: inline-block; position: absolute; top: 250px; left: 600px">Laszlo er vår produksjonsansvarlig.</p>'
+        document.getElementById("selection").innerHTML = '<div id="selection" style="position: absolute;top: 8px;right: 16px;color:black">Laszlo er vår produksjonsansvarlig.</div>'
     }
     function selected4(){
-        document.getElementById("selection").innerHTML = '<p style="display: inline-block; position: absolute; top: 250px; left: 600px">Kim er vår daglig leder og markedsfører.</p>'
+        document.getElementById("selection").innerHTML = '<div id="selection" style="position: absolute;top: 8px;right: 16px;color:black">Kim er vår daglig leder og markedsfører.</div>'
     }
     function selected5(){
-        document.getElementById("selection").innerHTML = '<p style="display: inline-block; position: absolute; top: 250px; left: 600px">Henrik er vår økonom.</p>'
+        document.getElementById("selection").innerHTML = '<div id="selection" style="position: absolute;top: 8px;right: 16px;color:black">Henrik er vår økonom.</div>'
     }
 
 </script>
