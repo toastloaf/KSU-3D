@@ -62,7 +62,7 @@
             <h2>Poseklemme x20</h2>
             <p>Poseklemmer kan brukes for å stenge poser</p>
             <button id="ATCB">Add To Cart</button>
-            <button id="BNB">Buy Now</button>
+            <a href="https://buy.stripe.com/6oE5mN96Hb1J7CM5kk" target="_top"><button id="BNB">Buy Now</button></a>
         </div>
         <!--Modal that appears when Buy Now button is clicked-->
         <div class="modal">
@@ -87,20 +87,7 @@
     // Add to cart button
     document.getElementById("ATCB").addEventListener("click", function() {
         alert("Added to cart!");
-        window.localStorage.setItem("cartItems", "BagClip");
+        localStorage.setItem("cartItems", "clip");
     });
-    // Buy now button, opens a popup using modals
-    document.getElementById("BNB").addEventListener("click", function() {
-      document.querySelector(".modal").style.display = "block";
-    });
-    
-    document.getElementById("close-modal").addEventListener("click", function() {
-      document.querySelector(".modal").style.display = "none";
-    });
-    window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-    } 
 </script>
 </html>
