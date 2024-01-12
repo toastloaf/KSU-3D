@@ -8,14 +8,15 @@
     </head>
     <style>
         .fighter_select td{text-align:center ; top: 200px;}
-        .fighter_select td:hover{
+        .fighter_selet td:hover{
             transform: scale(1.05); /* Makes the box slightly larger */
             transition: transform 0.3s ease-in-out; /* Animates the transformation */}
-        td{background-color: lightgray;}
+        td:hover{color: blue;}
+        td::after{content: '';display: block;margin: auto;height: 2px; /* Thickness of the underline */width: 0;background: blue; /* Color of the underline */transition: width 0.3s ease-in-out;bottom: 0; /* Adjust position of underline */}
+        td:hover::after{width: 100%;}
         .container {
         position: relative;
         text-align: center;
-        color: white;
         }
         #selectio {
   position: absolute;
@@ -38,10 +39,10 @@
     <a href="https://www.youtube.com/channel/UCTrfMcTF8noBVCc71_oBUfA" target="_blank"><img src="/Nettside/static/youtube-logo.png" alt="YouTube" class="link_icon">YouTube</a>
 </div>
 <div class="container">
-    <img src="static/jonas.gif" alt="Snow" style="width:100%;background-color: blueviolet;">
-    <div id="selection">Top Right</div>
+    <img src="static/jonas.gif" alt="Snow" style="width:100%;height: 300px;">
+    <div id="selection"></div>
 </div>        
-<table style="width: 100%;">
+<table style="width: 100%;table-layout: fixed;">
     <tr class="fighter_select">
         <td onclick="selected1()"><h1>Jonas</h1></td>
         <td onclick="selected2()"><h1>Vegar</h1></td>
@@ -53,19 +54,19 @@
 </html>
 <script>
     function selected1(){
-        document.getElementById("selection").innerHTML = '<div id="selection" style="position: absolute;top: 8px;right: 16px;color:black">Jonas er vår marketsansvarlig</div>'
+        document.getElementById("selection").innerHTML = '<div id="selection" style="position: absolute;top: 8px;right: 16px;color:blue">Jonas er vår marketsansvarlig</div>'
     }
     function selected2(){
-        document.getElementById("selection").innerHTML = '<div id="selection" style="position: absolute;top: 8px;right: 16px;color:black">Vegar er en av våre utviklere.</div>'
+        document.getElementById("selection").innerHTML = '<div id="selection" style="position: absolute;top: 8px;right: 16px;color:blue">Vegar er en av våre utviklere.</div>'
     }
     function selected3(){
-        document.getElementById("selection").innerHTML = '<div id="selection" style="position: absolute;top: 8px;right: 16px;color:black">Laszlo er vår produksjonsansvarlig.</div>'
+        document.getElementById("selection").innerHTML = '<div id="selection" style="position: absolute;top: 8px;right: 16px;color:blue">Laszlo er vår produksjonsansvarlig.</div>'
     }
     function selected4(){
-        document.getElementById("selection").innerHTML = '<div id="selection" style="position: absolute;top: 8px;right: 16px;color:black">Kim er vår daglig leder og markedsfører.</div>'
+        document.getElementById("selection").innerHTML = '<div id="selection" style="position: absolute;top: 8px;right: 16px;color:blue">Kim er vår daglig leder og markedsfører.</div>'
     }
     function selected5(){
-        document.getElementById("selection").innerHTML = '<div id="selection" style="position: absolute;top: 8px;right: 16px;color:black">Henrik er vår økonom.</div>'
+        document.getElementById("selection").innerHTML = '<div id="selection" style="position: absolute;top: 8px;right: 16px;color:blue">Henrik er vår økonom.</div>'
     }
 
 </script>
