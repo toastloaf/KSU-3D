@@ -7,12 +7,14 @@ body {
     transform: translateX(7%);
     margin-top: 1%;
     position: relative; top: -5px;
+    left: 17%;
 }
 
 #OrderButton, #InfoButton, #CostumButton, #CartButton {
     border-radius: 4px;
     background-color: lightgray;
     position: relative;
+    left: 17%;
     bottom: 3.5ch;
     display: inline-block;
     font-size: 1.5rem;
@@ -31,10 +33,6 @@ body {
     height: 44px;
     position: relative;
     top: -54px;
-<<<<<<< Updated upstream
-    
-=======
->>>>>>> Stashed changes
 }
 
 .CartButtonPic{
@@ -50,7 +48,7 @@ body {
 }
 
 #OrderButton:hover, #InfoButton:hover, #CostumButton:hover, #CartButton:hover {
-    color:blue ;
+    color:#0d5991 ;
 }
 
 #OrderButton::after, #InfoButton::after, #CostumButton::after, #CartButton::after {
@@ -59,7 +57,7 @@ body {
     margin: auto;
     height: 2px; /* Thickness of the underline */
     width: 0;
-    background: blue; /* Color of the underline */
+    background: #0d5991; /* Color of the underline */
     transition: width 0.3s ease-in-out;
     position: absolute;
     bottom: 0; /* Adjust position of underline */
