@@ -37,27 +37,27 @@
             transition: transform 0.3s ease-in-out; /* Animates the transformation */
         }
         .modal {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 400px;
-        height: 200px;
-        background-color: #fff;
-        border: 2px solid #000;
-        padding: 10px;
-        z-index: 1000;
-        display: none; /* Make the modal hidden by default */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 200px;
+            background-color: #fff;
+            border: 2px solid #000;
+            padding: 10px;
+            z-index: 1000;
+            display: none; /* Make the modal hidden by default */
         }
 
         .modal-fade {
-        background-color: rgba(0, 0, 0, 0.5); /* Fade the background */
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 999; /* Make the fade background appear below the modal */
+            background-color: rgba(0, 0, 0, 0.5); /* Fade the background */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999; /* Make the fade background appear below the modal */
         }
     </style>
 </head>
@@ -67,7 +67,7 @@
         <a href="Information.html"><button id="InfoButton" onclick="document.getElementById('MainContent').src='Information.html'">Main</button></a>
         <a href="Information.html"><img src="static/KSU-3D.svg" alt="KSU-3D" id="LogoHeader"></a>
         <a href="costum.html"><button id="CostumButton">Custom Order</button></a>
-        <a href="Cart.html"><button id="CartButton"><img src="static/cart-removebg-preview.png" style="width: 20px;"></button></a>
+        <a href="Cart.html"><button id="CartButton" class="CartButtonPic"></button></a>
     </header>
     <div class="grid-container">
         <div class="item-box">
@@ -79,8 +79,8 @@
         </div>
         <!--Modal that appears when Buy Now button is clicked-->
         <div class="modal">
-        <img src="image.png" alt="Image" class="modal-image">
-        <p class="modal-text">This is a modal.</p>
+            <img src="image.png" alt="Image" class="modal-image">
+            <p class="modal-text">This is a modal.</p>
         <div class="modal-buttons">
             <button class="modal-button">Cancel</button>
             <button class="modal-button">Confirm</button>

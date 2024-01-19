@@ -56,7 +56,7 @@ header {
     background-position: center;
 }
 
-#OrderButton:hover, #InfoButton:hover, #CostumButton:hover, #CartButton:hover {
+#OrderButton:hover, #InfoButton:hover, #CostumButton:hover{
     color:#0d5991 ;
 }
 
