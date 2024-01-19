@@ -11,7 +11,6 @@
                 body {
             padding-top: 120px; /* Adjust this value to match your header's height */
         }
-        .fighter_select td{text-align:center ; top: 200px;}
         .fighter_selet td:hover{
             transform: scale(1.05); /* Makes the box slightly larger */
             transition: transform 0.3s ease-in-out; /* Animates the transformation */}
@@ -22,22 +21,10 @@
         position: relative;
         text-align: center;
         }
-        #selectio {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}
-header {
-        width:100%;
-        position: absolute;
-        top:0;
-        left:0;
-        z-index: 1;
-        height: 120px;
-    }
+div a{margin: .25em;}
     </style>
 
-    <body onload="selected1()" syle="margin: 0;">
+    <body onload="selected1()">
         <header id="MainHeader" style="background-color: lightgrey;">
             <a href="Order.html"><button id="OrderButton" onclick="document.getElementById('MainContent').src='Order.html'">Order</button></a>
             <a href="Information.html"><button id="InfoButton" onclick="document.getElementById('MainContent').src='Information.html'">Main</button></a>
@@ -64,7 +51,7 @@ header {
     </tr>
 </table>
 <div style="background-color: lightgray;width: 100%;position: absolute;left: 0;">
-    <h1>Kontakt Oss!</h1>
+    <h1 style="margin: .25em;">Kontakt Oss!</h1>
     <a href="https://www.facebook.com" target="_blank"><img src="/Nettside/static/facebook-logo.png" alt="Facebook" class="link_icon">Facebook</a>
     <a href="https://www.instagram.com" target="_blank"><img src="/Nettside/static/instagram-logo.png" alt="Instagram" class="link_icon">Instagram</a>
     <a href="https://www.tiktok.com/@ksu_3d_ub" target="_blank"><img src="/Nettside/static/tiktok-logo.png" alt="TikTok" class="link_icon">TikTok</a>
