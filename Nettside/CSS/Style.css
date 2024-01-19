@@ -7,15 +7,17 @@ header {
     top:0;
     left:0;
     z-index: 1;
-    height: 120px;
+    height: 10%;
 }
 #LogoHeader {
     margin: auto;
-    width: 16%;
+    width: 13%;
     transform: translateX(7%);
     margin-top: 1%;
-    position: relative; top: -5px;
+    margin-bottom: 0;
+    position: relative; top: -10px;
     left: 17%;
+
 }
 
 #OrderButton, #InfoButton, #CostumButton, #CartButton {
@@ -76,6 +78,9 @@ header {
     width: 100%; /* Expands the underline to full width on hover */
 }
 
+footer {
+    margin-top: auto;
+}
 
 #ATCB {
     position: relative;
