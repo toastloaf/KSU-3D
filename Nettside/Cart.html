@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="CSS/Style.css">
     <link rel="icon" href="static/KSU-3D.svg">
+    <script src="https://js.stripe.com/v3/"></script>
 
     <style>
         body {
@@ -26,50 +27,8 @@
         <a href="Cart.html"><button id="CartButton" class="CartButtonPic"></button></a>
     </header>
     <h1 id="empty">Your cart is empty.</h1>
-        <div id="itemContainer" style="border-style: solid; border-radius: 10px; scale: 60%;"></div>
+    <div id="itemContainer" style="border-style: solid; border-radius: 10px; scale: 60%;"></div>
+
+<script src="./Scripts/Cart.js"></script>
 </body>
-<script>
-    // Get cart from local storage or initialize to an empty array if it doesn't exist
-    let cart = JSON.parse(window.localStorage.getItem('cartItems')) || [];
-    console.log(cart)
-
-    // Update cart display
-    function updateCart() {
-        const emptyElement = document.getElementById('empty');
-        const itemContainer = document.getElementById('itemContainer');
-
-        // If cart is empty
-        if (cart.length === 0) {
-            emptyElement.style.display = 'block';
-            itemContainer.style.display = 'none';
-        } else {
-            emptyElement.style.display = 'none';
-            itemContainer.style.display = 'block';
-
-            // Clear existing items
-            itemContainer.innerHTML = '';
-
-            // Add each item in the cart to the display
-            cart.forEach((item, index) => {
-                const itemElement = document.createElement('div');
-                itemElement.innerHTML = `
-                    <h1>${item.name} x${item.quantity}</h1>
-                    <img src="static/${item.image}">
-                    <button onclick="removeItem(${index})">Remove</button>
-                `;
-                itemContainer.appendChild(itemElement);
-            });
-        }
-    }
-
-    // Remove item from cart
-    function removeItem(index) {
-        cart.splice(index, 1);
-        window.localStorage.setItem('cartItems', JSON.stringify(cart));
-        updateCart();
-    }
-
-    // Call updateCart on page load
-    updateCart();
-</script>
 </html>
