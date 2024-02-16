@@ -93,7 +93,10 @@ footer {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-
+#ATCB:hover {
+    background-color: #0d5991;
+    color: white;
+}
 #BNB {
     position: relative;
     display: inline-block;
@@ -106,7 +109,10 @@ footer {
     transition: all 0.3s ease-in-out;
     background-color: orange;
 }
-
+#BNB:hover {
+    background-color:rgb(255, 175, 3) ;
+    border: solid 2px #0d5991;
+}
 #RemoveAll {
     position: fixed;
     display: inline-block;
@@ -206,7 +212,7 @@ select:focus {
     transition: all 0.3s ease-in-out;
 }
 
-#AddToCartButton:hover {
+AddToCartButton:hover {
     background-color: #1a1a1a;
     color: #f2f2f2;
 } */
