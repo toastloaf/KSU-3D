@@ -1,15 +1,14 @@
-// Get cart from session storage or initialize to an empty array if it doesn't exist
+// Get cart from cookie or initialize to an empty array if it doesn't exist
 let cartItems;
 
-try {
-    cartItems = JSON.parse(window.sessionStorage.getItem('cartItems'));
-} catch (e) {
+if (document.cookie.includes('cart=')) {
+    cartItems = JSON.parse(document.cookie.split('item=')[1]);
+}
+else {
     cartItems = [];
 }
 
-if (!Array.isArray(cartItems)) {
-    cartItems = [];
-}
+console.log(cartItems);
 
 // Update cart display
 function updateCart() {

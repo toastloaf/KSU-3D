@@ -47,13 +47,13 @@ header {
 }
 
 .CartButtonPic{
-    background: url("/Nettside/static/cart-bw.svg") no-repeat;
+    background: url("../cart-bw.svg") no-repeat;
     background-size: 20%;
     background-position: center;
 }
 
 .CartButtonPic:hover {
-    background: url("/Nettside/static/cart-blue.svg") no-repeat;
+    background: url("../cart-blue.svg") no-repeat;
     background-size: 20%;
     background-position: center;
 }
