@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us</title>
+        <link rel="stylesheet" href="Nettside/static/CSS/Style.css">
+        <link rel="icon" href="Nettside/static/KSU-3D.svg">
+    </head>
+    <style>
+        body {
+            padding-top: 10vh; /* Adjust this value to match your header's height */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+
+        }
+        body h1, body p{margin-left: 0.5%;}
+        .fighter_select td{text-align:center ; top: 200px;}
+        .fighter_selet td:hover{
+            transform: scale(1.05); /* Makes the box slightly larger */
+            transition: transform 0.3s ease-in-out; /* Animates the transformation */}
+        td:hover{color: blue;}
+        td::after{content: '';display: block;margin: auto;height: 2px; /* Thickness of the underline */width: 0;background: blue; /* Color of the underline */transition: width 0.3s ease-in-out;bottom: 0; /* Adjust position of underline */}
+        td:hover::after{width: 100%;}
+        .container {
+            position: relative;
+            text-align: center;
+        }
+
+    </style>
+
+    <body onload="selected1()">
+        <header id="MainHeader" style="background-color: lightgrey;box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.808);">
+            <a href="Order.html"><button id="OrderButton" onclick="document.getElementById('MainContent').src='Order.html'">Order</button></a>
+            <a href="Information.html"><button id="InfoButton" onclick="document.getElementById('MainContent').src='Information.html'">Main</button></a>
+            <a href="Information.html"><img src="Nettside/static/KSU-3D.svg" alt="KSU-3D" id="LogoHeader"></a>
+            <a href="Cart.html"><button id="CartButton" class="CartButtonPic"></button></a>
+        </header>
+        <p style="margin-top: 30px; margin-left: 20px; font-size: 150%;"><img src="Nettside/static/IMG_2987.JPG" style="float: left;width: 60vw;margin-left: -0.5%;margin-right: 0.5%; border-radius: 15px;"><mark style="font-size:200%;color: blue;font-weight: bold;background-color: white;">About Us</mark>
+            <br>Vi er et lag av elever fra kristiansund vidregående skole som driver med 3d-printing. Vi mener at 3d-printing skaper mange muligheter for kreativitet og produktivitet.
+            <br>Vår bedrift tilbyr kunder evnen til å bruke 3d-printerne til oss for å printe deres egne produkt, eller til å kjøpe produkt som vi har designet selv fra vår nettbutikk.
+        </p>
+        </div>
+<h1 style="color: blue;">Meet the team</h1>
+<img alt="Snow" style="width: 99%;height: 45vw;box-shadow: 0px 1px 5px black; margin: 10px;border-radius: 15px;" id="Employee">
+</div>        
+<table style="width: 100%;table-layout: fixed;">
+    <tr class="fighter_select">
+        <td onclick="selected1()"><h1>Jonas</h1></td>
+        <td onclick="selected2()"><h1>Vegar</h1></td>
+        <td onclick="selected3()"><h1>Laszlo</h1></td>
+        <td onclick="selected4()"><h1>Kim</h1></td>
+        <td onclick="selected5()"><h1>Henrik</h1></td>
+    </tr>
+</table>
+</body>
+<footer style="background-color: lightgray;width: 100%;box-shadow: 0px 1px 5px;">
+    <h1>Kontakt Oss!</h1>
+    <a href="https://www.facebook.com" target="_blank"><img src="Nettside/static/facebook-logo.png" alt="Facebook" class="link_icon">Facebook</a>
+    <a href="https://www.instagram.com" target="_blank"><img src="Nettside/static/instagram-logo.png" alt="Instagram" class="link_icon">Instagram</a>
+    <a href="https://www.tiktok.com/@ksu_3d_ub" target="_blank"><img src="Nettside/static/tiktok-logo.png" alt="TikTok" class="link_icon">TikTok</a>
+    <a href="https://www.youtube.com/channel/UCTrfMcTF8noBVCc71_oBUfA" target="_blank"><img src="Nettside/static/youtube-logo.png" alt="YouTube" class="link_icon">YouTube</a>
+</footer>
+</html>
+<script>
+    function selected1(){
+        document.getElementById("Employee").src="Nettside/static/ansatte-j.jpg"
+    }
+    function selected2(){
+        document.getElementById("Employee").src="Nettside/static/ansatte-v.jpg"
+    }
+    function selected3(){
+        document.getElementById("Employee").src="Nettside/static/ansatte-l.jpg"
+    }
+    function selected4(){
+        document.getElementById("Employee").src="Nettside/static/ansatte-k.jpg"
+    }
+    function selected5(){
+        document.getElementById("Employee").src="Nettside/static/ansatte-h.jpg"
+    }
+
+</script>
